@@ -7,6 +7,7 @@ import { FeaturesComponent } from './features/features.component';
 import { ProductCardsComponent } from './product-cards/product-cards.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CategoriesCardComponent } from './categories-card/categories-card.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CategoriesCardComponent } from './categories-card/categories-card.compo
     HeaderComponent,
     FeaturesComponent,
     ProductCardsComponent,
-    CategoriesCardComponent
+    CategoriesCardComponent,
+    FooterComponent
   ],
   imports: [BrowserModule, MaterialModule, SlickCarouselModule],
   providers: [],

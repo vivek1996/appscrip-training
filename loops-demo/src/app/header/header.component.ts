@@ -7,7 +7,7 @@ import { Component, OnInit, AfterViewChecked } from '@angular/core';
 })
 export class HeaderComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked() {
-    window.addEventListener('scroll', this.resizeHeaderOnScroll);
+    // window.addEventListener('scroll', this.resizeHeaderOnScroll);
   }
   constructor() {}
 
