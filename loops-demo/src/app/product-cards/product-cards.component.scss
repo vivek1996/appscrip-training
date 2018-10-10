@@ -1,0 +1,13 @@
+.card-header {
+  margin-bottom: 0;
+  padding: 1.25rem 1.5rem 0.25rem 1.5rem;
+  border-bottom: none;
+  background-color: #fff;
+}
+.card {
+  border: none;
+  border-radius: 0;
+  .card-img-top {
+    border-radius: 0;
+  }
+}

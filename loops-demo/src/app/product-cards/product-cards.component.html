@@ -1,16 +1,30 @@
-<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"
-  (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)" (beforeChange)="beforeChange($event)">
-
-  <div ngxSlickItem *ngFor="let slide of slides" class="slide card">
-    <img class="card-img-top" src="{{ slide.img }}" alt="" width="100%">
-  </div>
-</ngx-slick-carousel>
-
-<button (click)="addSlide()">Add</button>
-<button (click)="removeSlide()">Remove</button>
-<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-<button (click)="slickModal.unslick()">unslick</button>
-
 <div class="product-cards-container">
+  <div class="card">
+    <div class="card-header mb-0">
+      <h2 class="text-muted">Trending Products</h2>
+      <p class="text-muted">Near you there are <strong class=" text-dark">5+ </strong> Trending Products</p>
+    </div>
+    <div class="card-body">
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
 
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide card">
+          <img class="card-img-top" src="{{ slide.img }}" alt="" width="100%">
+          <div class="card-body mt-1 text-left">
+            <h6 class=" text-warning my-0">Save 6%</h6>
+            <h4>$4.45</h4>
+            <p class="text-truncate  my-0">Sunfeast yipee</p>
+            <div>
+              <h6 class=" text-muted  float-left">
+                240gm
+              </h6>
+              <h6 class="text-danger stock-status float-right">
+                Out Of Stock
+              </h6>
+            </div>
+          </div>
+
+        </div>
+      </ngx-slick-carousel>
+    </div>
+  </div>
 </div>
