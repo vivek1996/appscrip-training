@@ -20,8 +20,12 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "@blox/material": "^0.17.0",
     "core-js": "^2.5.4",
+    "jquery": "^3.3.1",
+    "ngx-slick-carousel": "^0.4.2",
     "rxjs": "~6.2.0",
+    "slick-carousel": "^1.8.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
