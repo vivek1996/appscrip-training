@@ -8,13 +8,13 @@ $mdc-theme-background: #fff;
 }
 .slick-prev,
 .slick-next {
-  width: 60px;
+  width: 40px;
   top: 0;
   bottom: 0;
   text-align: center;
   color: #333;
   // background: rgba(255, 255, 255, 0.9);
-  background: rgb(255, 255, 255);
+  background: #dbdedead;
   transition: 0.3s;
   opacity: 1;
   z-index: 1;
@@ -24,4 +24,16 @@ $mdc-theme-background: #fff;
   display: flex;
   align-items: center;
   transform: inherit;
+}
+.slick-next::before,
+.slick-prev::before {
+  // content: '→';
+}
+.slick-next {
+  right: 0;
+  border-left: 1px solid #dbdedead;
+}
+.slick-prev {
+  left: 0;
+  border-right: 1px solid #dbdedead;
 }
