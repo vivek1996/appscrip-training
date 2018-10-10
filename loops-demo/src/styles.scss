@@ -2,4 +2,7 @@
 $mdc-theme-primary: #6200ee;
 $mdc-theme-secondary: #018786;
 $mdc-theme-background: #fff;
-@import 'material-components-web/material-components-web';
+// @import 'material-components-web/material-components-web';
+* {
+  transition: all 0.3s;
+}

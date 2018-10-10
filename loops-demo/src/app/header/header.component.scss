@@ -1,0 +1,23 @@
+header .smaller {
+  height: 100px;
+}
+.header {
+  height: 285px;
+}
+.btn {
+  border-radius: 0;
+}
+.change-location-link {
+  font-size: 11px;
+  font-weight: 100;
+  &:hover {
+    border-bottom: 1px solid #fff;
+  }
+}
+.header-bg {
+  // background: url(https://images.unsplash.com/photo-1526470498-9ae73c665de8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d59e2ab1a82f0672df6d831d63ec39a5&auto=format&fit=crop&w=1804&q=80);
+  background: url(https://images.unsplash.com/photo-1474440692490-2e83ae13ba29?ixlib=rb-0.3.5&s=5ab60a0d1fc6c20c1733e288f78e65af&auto=format&fit=crop&w=1050&q=80);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  background-size: cover;
+  background-position: center 0;
+}
