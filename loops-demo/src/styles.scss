@@ -6,3 +6,22 @@ $mdc-theme-background: #fff;
 * {
   transition: all 0.3s;
 }
+.slick-prev,
+.slick-next {
+  width: 60px;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  color: #333;
+  // background: rgba(255, 255, 255, 0.9);
+  background: rgb(255, 255, 255);
+  transition: 0.3s;
+  opacity: 1;
+  z-index: 1;
+  height: inherit;
+  border-radius: inherit;
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  transform: inherit;
+}
