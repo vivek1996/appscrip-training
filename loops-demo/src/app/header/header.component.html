@@ -1,5 +1,5 @@
-<header>
-  <div class=" d-none d-md-block">
+<header class="d-sm-none d-md-block">
+  <div>
     <div class=" container-fluid js-header header-bg text-white  shadow" [ngClass]="{'d-none': navScrolled}">
       <div class="justify-content-center">
         <div class="row py-2 py-md-2">
@@ -94,9 +94,12 @@
       </div>
     </div>
   </div>
-  <!-- Mobile header -->
-  <div class=".d-none .d-sm-block .d-md-none">
-    <div class="container-fluid bg-white shadow fixed-top">
+
+</header>
+<!-- Mobile header -->
+<header>
+  <div class="d-none d-sm-block d-md-none">
+    <div class="container-fluid bg-white shadow fixed-top ">
       <div class="row p-2">
         <div class="col-12 row">
           <div class="col-2 mx-0 px-0"><i class="fa fa-certificate"></i></div>
