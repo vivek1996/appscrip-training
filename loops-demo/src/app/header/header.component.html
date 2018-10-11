@@ -1,36 +1,122 @@
-<header class=" container-fluid js-header header-bg text-white">
-  <div>
-    <div class="justify-content-center">
-      <div class="row py-2 py-md-2">
-        <div class="col-3">
-          <img src="#" alt="logo">
+<header>
+  <div class=" d-none d-md-block">
+    <div class=" container-fluid js-header header-bg text-white  shadow" [ngClass]="{'d-none': navScrolled}">
+      <div class="justify-content-center">
+        <div class="row py-2 py-md-2">
+          <div class="col-3">
+            <img src="#" alt="logo">
+          </div>
+          <div class="col-5 row align-items-center justify-content-end offset-4">
+            <div class="col-auto text-left p-0 "><span class=" small"> Delivery
+                Location
+                <i class="fa fa-angle-down"></i></span>
+              <p class="text-sm">RT Nagar, Bengaluru</p>
+            </div>
+            <div class="col-auto">
+              <button class=" btn btn-success">LogIn</button>
+            </div>
+            <div class="col-auto cart m-2">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+          </div>
         </div>
-        <div class="col-5 row align-items-center justify-content-end offset-4">
-          <div class="col-5 text-left p-0 "><span class=" small"> Delivery
-              Location
-              <i class="fa fa-angle-down"></i></span>
-            <p class="text-sm">RT Nagar, Bengaluru</p>
-          </div>
-          <div class="col-auto">
-            <button class=" btn btn-success">LogIn</button>
-          </div>
-          <div class="col-auto cart m-2">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-3 mx-auto text-center">
+          <p><i class="fa fa-certificate fa-3x"></i></p>
+          <h2 class="text-white">S-Mart</h2>
+          <small><a class="change-location-link text-warning" href="#">Change Location</a></small>
+        </div>
+      </div>
+      <div class="row m-2 pb-2">
+        <div class="col-12 col-md-8 col-lg-5 mx-auto text-center">
+          <input class=" form-control" type="text" placeholder="Search in Super Store">
+        </div>
+      </div>
+    </div>
+    <!-- Scrolled header -->
+    <div class="scrolled-header py-2 bg-white fixed-top shadow d-none" [ngClass]="{'d-block': navScrolled}">
+      <div class="container-fluid">
+        <div class="justify-content-center">
+          <div class="row">
+            <div class="col-2">
+              <p><i class="fa fa-certificate fa-3x"></i></p>
+            </div>
+            <div class="col-5">
+              <div class="row m-0">
+                <div class="col-12 text-center">
+                  <input class=" form-control form-control-cus" type="text" placeholder="Search in Super Store">
+                </div>
+              </div>
+            </div>
+            <div class="col-5 row align-items-center justify-content-end">
+              <div class="col-auto text-left p-0 "><span class=" small"> Delivery
+                  Location
+                  <i class="fa fa-angle-down"></i></span>
+                <p class="text-sm">RT Nagar, Bengaluru</p>
+              </div>
+              <div class="col-auto">
+                <button class=" btn btn-success">LogIn</button>
+              </div>
+              <div class="col-auto cart m-2">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              <p><i class="fa fa-certificate fa-2x"></i></p>
+            </div>
+            <div class="col-6">
+              <div class="row m-0">
+                <div class="col-12 ">
+                  <ul class="list-inline nav-catergorylist">
+                    <li class="list-inline-item px-1"> <a class="text-dark" href="#">Trending Products</a> </li>
+                    <li class="list-inline-item px-1"><a class="text-dark" href="#">Everyday Lowest Price</a></li>
+                    <li class="list-inline-item px-1"> <a class="text-dark" href="#">Top Brands</a></li>
+                    <li class="list-inline-item px-1"><a class="text-dark" href="#">Categories</a> </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-4 row align-items-center justify-content-end">
+              <div class="col-auto text-left p-0 ">
+
+                <p class="text-sm"> <i class="far fa-clock"></i> <span class="mx-2">Available <span class=" text-warning">
+                      4:30 AM to 2:30 PM</span></span>
+                  <i class="fas fa-arrow-right"></i>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-3 mx-auto text-center">
-        <p><i class="fa fa-certificate fa-3x"></i></p>
-        <h2 class="text-white">S-Mart</h2>
-        <small><a class="change-location-link text-warning" href="#">Change Location</a></small>
-      </div>
-    </div>
-    <div class="row m-2 pb-2">
-      <div class="col-12 col-md-8 col-lg-5 mx-auto text-center">
-        <input class=" form-control" type="text" placeholder="Search in Super Store">
+  </div>
+  <!-- Mobile header -->
+  <div class=".d-none .d-sm-block .d-md-none">
+    <div class="container-fluid bg-white shadow fixed-top">
+      <div class="row p-2">
+        <div class="col-12 row">
+          <div class="col-2 mx-0 px-0"><i class="fa fa-certificate"></i></div>
+          <div class="col-9 mx-0 px-0">
+            <div class="text-left p-0 "><span class=" small text-muted"> Delivery
+                Location
+                <i class="fa fa-angle-down"></i></span>
+              <h5 class=" font-weight-400 ">RT Nagar</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 row">
+          <div class="col-2 mx-0 px-0"><i class="fa fa-certificate"></i></div>
+          <div class="col-9 mx-0 px-0">
+            <div class="text-left p-0 "><span class=" small text-muted"> Select Stores
+                <i class="fa fa-angle-down"></i></span>
+              <h5 class=" font-weight-400 ">S-Mart</h5>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

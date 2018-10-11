@@ -37,3 +37,11 @@ $mdc-theme-background: #fff;
   left: 0;
   border-right: 1px solid #dbdedead;
 }
+.slick-prev::before,
+.slick-next::before {
+  font-family: fontawesome !important;
+  font-size: 30px !important;
+  line-height: 1;
+  opacity: 0.75;
+  color: #fb6340;
+}

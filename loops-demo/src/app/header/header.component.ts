@@ -1,25 +1,23 @@
-import { Component, OnInit, AfterViewChecked } from '@angular/core';
-
+import { Component, OnInit, HostListener } from '@angular/core';
+import * as $ from 'jquery';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, AfterViewChecked {
-  ngAfterViewChecked() {
-    // window.addEventListener('scroll', this.resizeHeaderOnScroll);
-  }
+export class HeaderComponent implements OnInit {
+  private navScrolled: Boolean;
   constructor() {}
 
   ngOnInit() {}
-  resizeHeaderOnScroll() {
-    const distanceY = window.pageYOffset || document.documentElement.scrollTop,
-      shrinkOn = 200,
-      headerEl = document.getElementById('js-header');
-    if (distanceY > shrinkOn) {
-      headerEl.classList.add('smaller');
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = $(window).scrollTop();
+    if (scrollTop < 100) {
+      this.navScrolled = false;
     } else {
-      headerEl.classList.remove('smaller');
+      this.navScrolled = true;
     }
   }
 }
