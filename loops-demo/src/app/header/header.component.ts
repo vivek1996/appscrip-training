@@ -12,7 +12,7 @@ import { Subject } from 'rxjs';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit, OnChanges {
+export class HeaderComponent implements OnInit {
   constructor() {}
   private navScrolled: Boolean;
 
@@ -20,13 +20,11 @@ export class HeaderComponent implements OnInit, OnChanges {
   storeDetail: Subject<Object>;
 
   ngOnInit() {}
-  ngOnChanges() {
-    console.log(this.storeDetail);
-  }
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollTop = $(window).scrollTop();
-    if (scrollTop < 200) {
+    if (scrollTop < 150) {
       this.navScrolled = false;
     } else {
       this.navScrolled = true;

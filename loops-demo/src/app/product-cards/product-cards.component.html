@@ -7,19 +7,23 @@
     <div class="card-body">
       <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
 
-        <div ngxSlickItem *ngFor="let slide of slides" class="slide card">
-          <img class="card-img-top" src="{{ slide.img }}" alt="" width="100%">
+        <div ngxSlickItem *ngFor="let card of productCardsData" class="slide card" [title]="card.productName">
+          <div class="card-img-top mx-auto w-50 card-lift--hover">
+            <img width="140" height="140" class=" mx-auto" [src]="card.mobileImage['0'].image | safe: 'url'" [alt]="card.productName"
+              width="100%">
+          </div>
           <div class="card-body mt-1 text-left">
             <h6 class=" text-warning my-0">Save 6%</h6>
-            <h4>$4.45</h4>
-            <p class="text-truncate  my-0">Sunfeast yipee</p>
+            <h4>₹ {{card.finalPrice}}</h4>
+            <p class="text-truncate  my-0">{{card.productName}}</p>
             <div>
               <h6 class=" text-muted  float-left">
-                240gm
+                {{card.unitName}}
               </h6>
-              <h6 class="text-danger stock-status float-right">
-                Out Of Stock
+              <h6 class="text-danger stock-status float-right" *ngIf="card.outOfStock">
+                **Out Of Stock
               </h6>
+              <button *ngIf="!card.outOfStock" class=" btn btn-outline-success btn-sm mx-2 px-2 stock-status float-right">Add</button>
             </div>
           </div>
 

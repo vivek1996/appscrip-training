@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-product-cards',
@@ -6,15 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product-cards.component.scss']
 })
 export class ProductCardsComponent implements OnInit {
-  slides = [
-    { img: 'http://placehold.it/350x150/000000' },
-    { img: 'http://placehold.it/350x150/111111' },
-    { img: 'http://placehold.it/350x150/333333' },
-    { img: 'http://placehold.it/350x150/666666' },
-    { img: 'http://placehold.it/350x150/444444' },
-    { img: 'http://placehold.it/350x150/555554' },
-    { img: 'http://placehold.it/350x150/111111' }
-  ];
+  @Input()
+  productCardsData: Subject<Array<object>>;
   slideConfig = {
     dots: false,
     infinite: false,

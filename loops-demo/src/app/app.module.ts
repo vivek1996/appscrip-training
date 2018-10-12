@@ -9,6 +9,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { CategoriesCardComponent } from './categories-card/categories-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SafePipe } from './safe.pipe';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,16 @@ import { HttpClientModule } from '@angular/common/http';
     FeaturesComponent,
     ProductCardsComponent,
     CategoriesCardComponent,
-    FooterComponent
+    FooterComponent,
+    SafePipe
   ],
-  imports: [BrowserModule, MaterialModule, SlickCarouselModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    MaterialModule,
+    SlickCarouselModule,
+    HttpClientModule,
+    BrowserAnimationsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,12 +1,12 @@
 <div class="categories-container  bg-white  p-sm-0 p-md-4">
   <h2 class=" text-muted text-left font-weight-300">Categories</h2>
-  <div class="row">
+  <div class="row" *ngIf="categoriesData">
     <div class="col-12 col-md-6 my-2 " *ngFor="let category of categoriesData">
       <div class="media border p-2 align-items-center">
-        <i class="fas fa-4x mx-3 text-purple" [ngClass]="category.image"></i>
+        <img class="mx-3 img-fluid" style="height: 80px;width: 80px;" [src]="category.imageUrl" [alt]="category.categoryName">
         <div class="media-body p-1">
-          <h5 class="mt-0"> {{category.title}} </h5>
-          <h6 class="text-muted font-weight-400">{{category.desc}}</h6>
+          <h5 class="mt-0"> {{category.categoryName}} </h5>
+          <h6 class="text-muted font-weight-400">{{category.description}}</h6>
         </div>
         <i class="fas fa-arrow-right float-right"></i>
       </div>

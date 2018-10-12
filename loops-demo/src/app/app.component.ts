@@ -11,6 +11,9 @@ export class AppComponent implements OnInit {
   userLocation: Position;
   zoneId: String;
   headerData: Object;
+  categoriesData: Array<object>;
+  trendingProductsData: Array<object>;
+  lowestPriceData: Array<object>;
   constructor(private _http: ApiService) {
     this.findUserLocation();
     // this.getInitialId();
@@ -73,5 +76,8 @@ export class AppComponent implements OnInit {
 
   formatData(dat) {
     this.headerData = dat.data.store;
+    this.categoriesData = dat.data.categories;
+    this.trendingProductsData = dat.data.products;
+    this.lowestPriceData = dat.data.lowestPrice;
   }
 }
