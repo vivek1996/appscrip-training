@@ -14,7 +14,7 @@ import { Subject } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   constructor() {}
-  private navScrolled: Boolean;
+  navScrolled: Boolean;
 
   @Input()
   storeDetail: Subject<Object>;

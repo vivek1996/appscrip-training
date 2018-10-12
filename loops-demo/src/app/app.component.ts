@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
       data => {
         console.log(data);
         const res = data;
-        this.guestToken = res.data.token;
+        this.guestToken = res['data'].token;
         this.getZoneId();
       },
       error => {
@@ -52,7 +52,7 @@ export class AppComponent implements OnInit {
     this._http.getBusinessZones(this.guestToken, this.userLocation).subscribe(
       data => {
         console.log(data);
-        this.zoneId = data.data.zoneId;
+        this.zoneId = data['data'].zoneId;
         this.getStoreDetail();
       },
       error => {
