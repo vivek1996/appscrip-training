@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   guestToken: String;
   userLocation: Position;
   zoneId: String;
+  headerData: Object;
   constructor(private _http: ApiService) {
     this.findUserLocation();
     // this.getInitialId();
@@ -62,10 +63,15 @@ export class AppComponent implements OnInit {
       .subscribe(
         data => {
           console.log(data);
+          this.formatData(data);
         },
         error => {
           console.log(error);
         }
       );
+  }
+
+  formatData(dat) {
+    this.headerData = dat.data.store;
   }
 }

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ReturnStatement } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
   private baseUrl = 'https://api-dev.loopzdelivery.com';
+  private headersHttp = new HttpHeaders().set('language', 'en');
 
   constructor(private http: HttpClient) {}
 
@@ -15,10 +15,10 @@ export class ApiService {
       deviceId: 'efbt',
       deviceType: 3
     };
-    let headers = new HttpHeaders();
-    headers = headers.set('language', 'en');
+    // let headers = new HttpHeaders();
+    // headers = headers.set('language', 'en');
     return this.http.post(`${this.baseUrl}/web/guest/signIn`, param, {
-      headers: headers
+      headers: this.headersHttp
     });
   }
   getBusinessZones(guestToken, position) {
@@ -26,23 +26,19 @@ export class ApiService {
       latitude: position.coords.latitude,
       longitude: position.coords.longitude
     };
-    let headers = new HttpHeaders();
-    headers = headers.set('authorization', guestToken);
-    headers = headers.set('language', 'en');
+    this.headersHttp = this.headersHttp.set('authorization', guestToken);
     return this.http.post(`${this.baseUrl}/business/zones`, param, {
-      headers: headers
+      headers: this.headersHttp
     });
   }
   getStoreDetails(guestToken, position, zoneId) {
-    let headers = new HttpHeaders();
-    headers = headers.set('authorization', guestToken);
-    headers = headers.set('language', 'en');
+    this.headersHttp = this.headersHttp.set('authorization', guestToken);
     // tslint:disable-next-line:max-line-length
     return this.http.get(
-      `${this.baseUrl}/business/categories/${zoneId}/0/${
+      `${this.baseUrl}/business/categories/${zoneId}/5b5201a06e47973b59553606/${
         position.coords.latitude
       }/${position.coords.longitude}`,
-      { headers: headers }
+      { headers: this.headersHttp }
     );
   }
 }

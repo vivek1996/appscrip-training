@@ -1,4 +1,4 @@
-<header class="d-sm-none d-md-block">
+<header class="d-sm-none d-md-block" *ngIf="storeDetail">
   <div>
     <div class=" container-fluid js-header header-bg text-white  shadow" [ngClass]="{'d-none': navScrolled}">
       <div class="justify-content-center">
@@ -10,7 +10,7 @@
             <div class="col-auto text-left p-0 "><span class=" small"> Delivery
                 Location
                 <i class="fa fa-angle-down"></i></span>
-              <p class="text-sm">RT Nagar, Bengaluru</p>
+              <p class="text-sm text-truncate"> {{storeDetail.businessAddress}} </p>
             </div>
             <div class="col-auto">
               <button class=" btn btn-success">LogIn</button>
@@ -23,8 +23,8 @@
       </div>
       <div class="row">
         <div class="col-3 mx-auto text-center">
-          <p><i class="fa fa-certificate fa-3x"></i></p>
-          <h2 class="text-white">S-Mart</h2>
+          <img style="height: 60px; width: 60px" class="img-fluid rounded-circle" [src]="storeDetail.bannerImage" [alt]="storeDetail.businessName">
+          <h2 class="text-white">{{storeDetail.businessName}}</h2>
           <small><a class="change-location-link text-warning" href="#">Change Location</a></small>
         </div>
       </div>
@@ -53,7 +53,7 @@
               <div class="col-auto text-left p-0 "><span class=" small"> Delivery
                   Location
                   <i class="fa fa-angle-down"></i></span>
-                <p class="text-sm">RT Nagar, Bengaluru</p>
+                <p class="text-sm text-truncate">{{storeDetail.businessAddress}} </p>
               </div>
               <div class="col-auto">
                 <button class=" btn btn-success">LogIn</button>
@@ -66,7 +66,8 @@
           </div>
           <div class="row">
             <div class="col-2">
-              <p><i class="fa fa-certificate fa-2x"></i></p>
+              <img style="height: 40px; width: 40px" class="img-fluid rounded-circle" [src]="storeDetail.bannerImage"
+                [alt]="storeDetail.businessName">
             </div>
             <div class="col-6">
               <div class="row m-0">
@@ -84,7 +85,8 @@
               <div class="col-auto text-left p-0 ">
 
                 <p class="text-sm"> <i class="far fa-clock"></i> <span class="mx-2">Available <span class=" text-warning">
-                      4:30 AM to 2:30 PM</span></span>
+                      {{storeDetail.availableSlots["0"].startTime | date: 'shortTime' }} to
+                      {{storeDetail.availableSlots["0"].endTime | date: 'shortTime' }}</span></span>
                   <i class="fas fa-arrow-right"></i>
                 </p>
               </div>
@@ -97,7 +99,7 @@
 
 </header>
 <!-- Mobile header -->
-<header>
+<header *ngIf="storeDetail">
   <div class="d-none d-sm-block d-md-none">
     <div class="container-fluid bg-white shadow fixed-top ">
       <div class="row p-2">
@@ -107,16 +109,17 @@
             <div class="text-left p-0 "><span class=" small text-muted"> Delivery
                 Location
                 <i class="fa fa-angle-down"></i></span>
-              <h5 class=" font-weight-400 ">RT Nagar</h5>
+              <h5 class=" font-weight-400 ">{{storeDetail.businessAddress}} </h5>
             </div>
           </div>
         </div>
         <div class="col-12 row">
-          <div class="col-2 mx-0 px-0"><i class="fa fa-certificate"></i></div>
+          <div class="col-2 mx-0 px-0"> <img style="height: 30px; width: 30px" class="img-fluid rounded-circle" [src]="storeDetail.bannerImage"
+              [alt]="storeDetail.businessName"></div>
           <div class="col-9 mx-0 px-0">
             <div class="text-left p-0 "><span class=" small text-muted"> Select Stores
                 <i class="fa fa-angle-down"></i></span>
-              <h5 class=" font-weight-400 ">S-Mart</h5>
+              <h5 class=" font-weight-400 ">{{storeDetail.businessName}}</h5>
             </div>
           </div>
         </div>
