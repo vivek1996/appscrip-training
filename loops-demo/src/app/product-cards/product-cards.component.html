@@ -17,13 +17,25 @@
             <h4>₹ {{card.finalPrice}}</h4>
             <p class="text-truncate  my-0">{{card.productName}}</p>
             <div>
-              <h6 class=" text-muted  float-left">
-                {{card.unitName}}
-              </h6>
-              <h6 class="text-danger stock-status float-right" *ngIf="card.outOfStock">
-                **Out Of Stock
-              </h6>
-              <button *ngIf="!card.outOfStock" class=" btn btn-outline-success btn-sm mx-2 px-2 stock-status float-right">Add</button>
+
+              <div class="d-none d-md-block">
+                <h6 class=" text-muted  float-left">
+                  {{card.unitName}}
+                </h6>
+                <h6 class="text-danger stock-status float-right" *ngIf="card.outOfStock">
+                  **Out Of Stock
+                </h6>
+                <button *ngIf="!card.outOfStock" class=" btn btn-outline-success btn-sm mx-2 px-2 stock-status float-right">Add</button>
+              </div>
+              <div class="d-block d-md-none">
+                <h6 class=" text-muted  text-center">
+                  {{card.unitName}}
+                </h6>
+                <h6 class="text-danger stock-status text-center" *ngIf="card.outOfStock">
+                  **Out Of Stock
+                </h6>
+                <button *ngIf="!card.outOfStock" class=" btn btn-outline-success btn-block mx-2 px-2 stock-status text-center">Add</button>
+              </div>
             </div>
           </div>
 
