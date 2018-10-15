@@ -3,11 +3,11 @@
 </ng-http-loader>
 <app-header [storeDetail]="headerData"></app-header>
 <div class="container-fluid pt-8 pt-md-0 ">
-  <app-offers></app-offers>
+  <app-offers [cardData]="offersData"></app-offers>
 </div>
 
-<div class="container ">
-  <app-offers [cardData]="offersData"></app-offers>
+<div class="container-fluid ">
+  <app-features></app-features>
 </div>
 <div class="container-fluid my-3">
   <app-product-cards [productCardsData]="trendingProductsData"></app-product-cards>
