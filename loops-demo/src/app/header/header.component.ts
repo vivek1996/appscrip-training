@@ -24,10 +24,12 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollTop = $(window).scrollTop();
-    if (scrollTop < 150) {
+    if (scrollTop <= 150) {
       this.navScrolled = false;
+      console.log(this.navScrolled);
     } else {
       this.navScrolled = true;
+      console.log(this.navScrolled);
     }
   }
 }
