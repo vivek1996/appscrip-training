@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SafePipe } from './safe.pipe';
+import { NgHttpLoaderModule } from 'ng-http-loader';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SafePipe } from './safe.pipe';
     MaterialModule,
     SlickCarouselModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgHttpLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

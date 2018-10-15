@@ -1,12 +1,13 @@
 import { ApiService } from './api.service';
 import { Component, OnInit } from '@angular/core';
-
+import { Spinkit } from 'ng-http-loader';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  public spinkit = Spinkit;
   guestToken: String;
   userLocation: Position;
   zoneId: String;
@@ -19,7 +20,7 @@ export class AppComponent implements OnInit {
     // this.getInitialId();
   }
   ngOnInit() {
-    // this.getZoneId();
+    // this.getZoneId()
   }
   // get user Location
   findUserLocation() {

@@ -23,6 +23,7 @@
     "@blox/material": "^0.17.0",
     "core-js": "^2.5.4",
     "jquery": "^3.3.1",
+    "ng-http-loader": "^3.1.2",
     "ngx-slick-carousel": "^0.4.2",
     "rxjs": "~6.2.0",
     "slick-carousel": "^1.8.1",
