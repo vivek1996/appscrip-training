@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SafePipe } from './safe.pipe';
 import { NgHttpLoaderModule } from 'ng-http-loader';
+import { OffersComponent } from './offers/offers.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     ProductCardsComponent,
     CategoriesCardComponent,
     FooterComponent,
-    SafePipe
+    SafePipe,
+    OffersComponent
   ],
   imports: [
     BrowserModule,

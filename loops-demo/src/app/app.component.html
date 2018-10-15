@@ -2,8 +2,12 @@
   [extraDuration]="300">
 </ng-http-loader>
 <app-header [storeDetail]="headerData"></app-header>
-<div class="container">
-  <app-features></app-features>
+<div class="container-fluid pt-8 pt-md-0 ">
+  <app-offers></app-offers>
+</div>
+
+<div class="container ">
+  <app-offers [cardData]="offersData"></app-offers>
 </div>
 <div class="container my-3">
   <app-product-cards [productCardsData]="trendingProductsData"></app-product-cards>

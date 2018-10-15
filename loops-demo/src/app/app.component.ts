@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
   categoriesData: Array<object>;
   trendingProductsData: Array<object>;
   lowestPriceData: Array<object>;
+  offersData: Array<object>;
   constructor(private _http: ApiService) {
     this.findUserLocation();
     // this.getInitialId();
@@ -80,5 +81,6 @@ export class AppComponent implements OnInit {
     this.categoriesData = dat.data.categories;
     this.trendingProductsData = dat.data.products;
     this.lowestPriceData = dat.data.lowestPrice;
+    this.offersData = dat.data.offers;
   }
 }

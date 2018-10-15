@@ -1,0 +1,11 @@
+<div *ngIf="cardData" class="d-block d-md-none">
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+
+    <div ngxSlickItem *ngFor="let card of cardData" class="slide" [title]="card.name">
+      <div class=" w-100">
+        <img class=" img-fluid mx-auto" [src]="card.images.mobile | safe: 'url'" [alt]="card.productName" width="100%">
+      </div>
+
+    </div>
+  </ngx-slick-carousel>
+</div>
