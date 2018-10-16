@@ -14,7 +14,7 @@ import { Subject } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
   constructor() {}
-  navScrolled: Boolean;
+  navScrolled: Boolean = false;
 
   @Input()
   storeDetail: Subject<Object>;
@@ -23,19 +23,16 @@ export class HeaderComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // let scrollTop = $(window).scrollTop();
-    // const doc = document.documentElement;
-    // let scrollTop =
-    //   (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-    // let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     let scrollTop = window.scrollY;
     // scrollTop = Math.round(scrollTop);
     scrollTop = Math.ceil(scrollTop / 100) * 100;
-    if (scrollTop <= 200) {
+    if (scrollTop <= 200 && scrollTop <= 500) {
       this.navScrolled = false;
+      $('.js-header').addClass('d-block');
       console.log(this.navScrolled, scrollTop);
     } else {
       this.navScrolled = true;
+      $('.js-header').removeClass('d-none');
       console.log(this.navScrolled, scrollTop);
     }
   }
