@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-blue: #1d8fe1;
 body {
-  background-color: #f9f7fc;
+  background-color: #f7f9fc;
+}
+* {
+  transition: all 0.3s ease-in-out;
+}
+.bg-primary-blue {
+  background-color: $primary-blue;
 }

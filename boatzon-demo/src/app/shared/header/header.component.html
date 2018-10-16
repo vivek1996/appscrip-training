@@ -1,30 +1,52 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+<nav class="navbar navbar-expand-lg navbar-light bg-white ">
   <div class="container">
-    <a class="navbar-brand" href="#">Boatzon</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-default" aria-controls="navbar-default"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
+    <a class="navbar-brand d-none d-md-block" href="#">boatzon</a>
+    <a class="navbar-brand d-block d-md-none" href="#">B</a>
+    <form class="form-inline shadow-sm border-radius-20 mx-md-5">
+      <div class="input-group input-group-sm">
+        <div class="input-group-prepend">
+          <span class="input-group-text bg-light border-right-0 border-left-rounded" id="basic-addon1"><i class="fas fa-search"></i></span>
+        </div>
+        <input type="text" class="form-control border-left-0 bg-light
+          " placeholder="Search Boatzon"
+          aria-label="Search Boatzon">
+        <input type="text" class="form-control bg-light" placeholder="My Location" aria-label="My Location">
+        <div class="input-group-append">
+          <button class="btn btn-success border-right-rounded" type="button">Go</button>
+        </div>
+      </div>
+    </form>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbar-default">
-      <ul class="navbar-nav ml-lg-auto">
-        <li class="nav-item ">
-          <a class="nav-link nav-link-icon" href="#">
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle  text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            English
           </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Tamil</a>
+            <a class="dropdown-item" href="#">French</a>
+            <a class="dropdown-item" href="#">Germany</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-link-icon" href="#">
-            <span class="nav-link-inner--text">Contact Us</span>
-          </a>
+          <a class="nav-link text-dark" href="#">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-link-icon" href="#">
-
-            <span class="nav-link-inner--text">Member login</span>
-          </a>
+          <a class="nav-link text-dark" href="#">Member Login</a>
         </li>
 
+        <li class="nav-item">
+          <a class="nav-link btn btn-success text-white shadow-sm" href="#">Get Listed Today</a>
+        </li>
       </ul>
 
     </div>
   </div>
+
 </nav>
