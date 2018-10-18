@@ -67,15 +67,15 @@ body {
   flex: 0;
 }
 .product-container .product-card {
-  padding: 0.2rem;
+  padding: 0.1rem;
   display: block;
   // width: 200px;
-  border-radius: 0.2rem;
+  border-radius: 0.5rem;
   background-color: #ffffff;
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  border: 1px solid #d8d8d8;
+  // border: 1px solid #d8d8d8;
   margin: 0.2rem;
   img {
     border: none;
