@@ -3,13 +3,19 @@
     <a class="navbar-brand d-none d-md-block" href="#">boatzon</a>
     <a class="navbar-brand d-block d-md-none" href="#">B</a>
     <form class="form-inline shadow-sm border-radius-20 mx-md-5">
-      <div class="input-group input-group-sm">
+      <div class="input-group input-group-sm d-none d-md-flex">
         <div class="input-group-prepend">
           <span class="input-group-text bg-light border-right-0 border-left-rounded" id="basic-addon1"><i class="fas fa-search"></i></span>
         </div>
         <input type="text" class="form-control border-left-0 bg-light
           " placeholder="Search Boatzon"
           aria-label="Search Boatzon">
+        <input type="text" class="form-control bg-light" placeholder="My Location" aria-label="My Location">
+        <div class="input-group-append">
+          <button class="btn btn-success border-right-rounded" type="button">Go</button>
+        </div>
+      </div>
+      <div class="d-flex d-md-none input-group input-group-sm">
         <input type="text" class="form-control bg-light" placeholder="My Location" aria-label="My Location">
         <div class="input-group-append">
           <button class="btn btn-success border-right-rounded" type="button">Go</button>
