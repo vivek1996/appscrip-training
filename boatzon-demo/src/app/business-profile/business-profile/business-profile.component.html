@@ -46,16 +46,65 @@
     <div class="col-xs-12 ">
       <nav>
         <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-            aria-controls="nav-home" aria-selected="true">SELLING</a>
-          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
-            aria-controls="nav-profile" aria-selected="false">SOLD</a>
-          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
-            aria-controls="nav-contact" aria-selected="false">FAVOURITES</a>
+          <a class="nav-item nav-link active" id="nav-overview-tab" data-toggle="tab" href="#nav-overview" role="tab"
+            aria-controls="nav-overview" aria-selected="true">OVERVIEW</a>
+          <a class="nav-item nav-link" id="nav-photos-tab" data-toggle="tab" href="#nav-photos" role="tab"
+            aria-controls="nav-photos" aria-selected="false">PHOTOS</a>
         </div>
       </nav>
       <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="tab-pane fade show active" id="nav-overview" role="tabpanel" aria-labelledby="nav-overview-tab">
+          <div class="map-container" style="max-height: 270px;">
+            <img class="w-100 " style="max-height: 270px;" src="https://source.unsplash.com/featured/?map" alt="">
+          </div>
+        </div>
+        <div class="tab-pane fade" id="nav-photos" role="tabpanel" aria-labelledby="nav-photos-tab">
+          <div class="product-container">
+            <div class="product-item shadow-sm">
+              <div class="product-detail">
+
+                <img src="https://source.unsplash.com/random" alt="">
+              </div>
+            </div>
+            <div class="product-item shadow-sm">
+              <div class="product-detail">
+                <img src="https://source.unsplash.com/random/100x100" alt="">
+              </div>
+            </div>
+            <div class="product-item shadow-sm">
+              <div class="product-detail">
+                <img src="https://source.unsplash.com/random/150x250" alt="">
+              </div>
+            </div>
+            <div class="product-item shadow-sm">
+              <div class="product-detail">
+                <img src="https://source.unsplash.com/random/200x250" alt="">
+              </div>
+            </div>
+            <div class="product-item shadow-sm">
+              <div class="product-detail">
+                <img src="https://source.unsplash.com/random" alt="">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 ">
+      <nav>
+        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active" id="nav-listings-tab" data-toggle="tab" href="#nav-listings" role="tab"
+            aria-controls="nav-listings" aria-selected="true">LISTINGS</a>
+          <a class="nav-item nav-link" id="nav-reviews-tab" data-toggle="tab" href="#nav-reviews" role="tab"
+            aria-controls="nav-reviews" aria-selected="false">REVIEWS</a>
+        </div>
+      </nav>
+      <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-listings" role="tabpanel" aria-labelledby="nav-listing-tab">
           <div class="product-container">
             <div class="product-item shadow-sm">
               <div class="product-detail">
@@ -117,70 +166,7 @@
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-          <div class="product-container">
-            <div class="product-item shadow-sm">
-              <div class="product-detail">
-
-                <img src="https://source.unsplash.com/random" alt="">
-
-
-                <div class="product-name bg-white">
-                  Lorem, ipsum dolor.
-                </div>
-                <div class="owner-detail">
-                  Lorem, ipsum.
-                </div>
-              </div>
-            </div>
-            <div class="product-item shadow-sm">
-              <div class="product-detail">
-                <img src="https://source.unsplash.com/random/100x100" alt="">
-                <div class="product-name bg-white">
-                  Lorem, ipsum dolor.
-                </div>
-                <div class="owner-detail">
-                  Lorem, ipsum.
-                </div>
-              </div>
-            </div>
-            <div class="product-item shadow-sm">
-              <div class="product-detail">
-                <img src="https://source.unsplash.com/random/150x250" alt="">
-                <div class="product-name bg-white">
-                  Lorem, ipsum dolor.
-                </div>
-                <div class="owner-detail">
-                  Lorem, ipsum.
-                </div>
-              </div>
-            </div>
-            <div class="product-item shadow-sm">
-              <div class="product-detail">
-                <img src="https://source.unsplash.com/random/200x250" alt="">
-                <div class="product-name bg-white">
-                  Lorem, ipsum dolor.
-                </div>
-                <div class="owner-detail">
-                  Lorem, ipsum.
-                </div>
-              </div>
-            </div>
-            <div class="product-item shadow-sm">
-              <div class="product-detail">
-                <img src="https://source.unsplash.com/random" alt="">
-                <div class="product-name bg-white">
-                  Lorem, ipsum dolor.
-                </div>
-                <div class="owner-detail">
-                  Lorem, ipsum.
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <div class="tab-pane fade" id="nav-reviews" role="tabpanel" aria-labelledby="nav-reviews-tab">
           <div class="product-container">
             <div class="product-item shadow-sm">
               <div class="product-detail">
