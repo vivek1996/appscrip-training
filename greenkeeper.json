@@ -1,0 +1,10 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "boatzon-demo/package.json",
+        "loops-demo/package.json"
+      ]
+    }
+  }
+}
